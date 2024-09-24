@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger Registration</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Passenger Registration</h1>
+        <form th:action="@{/passtatus}" th:object="${passengers}" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="name">Passenger name</label>
+                <input type="text" placeholder="Enter your name" name="name" th:field="*{name}">
+                <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+
+                <br>
+
+                <br>
+                <div class="gender-section">
+                    <label class="gender-label">
+                        <label for="name"> Gender</label>
+                        <input type="radio" name="gender" id="male" value="Male" th:checked="${passengers.gender == 'Male'}"
+                            class="gender-input">
+                        <span>Male</span>
+                    </label>
+                    <label class="gender-label">
+                        <input type="radio" name="gender" value="Female" id="female"
+                            th:checked="${passengers.gender == 'Female'}" class="gender-input">
+                        <span>Female</span>
+                    </label>
+                </div>
+                <br>
+                <br>
+                <label for="username">Passenger username</label>
+                <input type="text" placeholder="Enter your address" name="username" th:field="*{username}">
+                <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+
+                <br>
+                <br>
+                <label for="password">Passenger password</label>
+                <input type="password" placeholder="Enter your password" name="password" th:field="*{password}">
+                <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+
+                <br>
+                <br>
+                <br>
+                <label for="birthDate">Birthdate</label>
+                <input type="date" id="birthDate" name="birthDate" th:field="*{birthDate}">
+
+                <br>
+                <br>
+
+                <input type="submit">
+
+            </div>
+
+
+            <br>
+            <br>
+            <a th:href="@{/Passlogin}">click for passanger login</a>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

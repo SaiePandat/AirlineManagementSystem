@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Booking</title>
+    <link rel="stylesheet" href="/CSS/style5.css">
+    
+</head>
+<body>
+    <h1>Fill Your Information</h1>
+    <form th:action="@{/booking/add}" th:object="${booking}" method="post">
+     <div>
+            <label for="firstName">Enter Your FirstName</label>
+            <input type="text" id="firstName" th:field="*{firstName}" />
+        </div>
+    <div>
+            <label for="lastName">Enter Your LastName</label>
+            <input type="text" id="lastName" th:field="*{lastName}" />
+        </div>
+        <div>
+            <label for="age">Enter Your Age</label>
+            <input type="text" id="age" th:field="*{age}" />
+        </div>
+       
+<div>
+<label for="gender">Gender</label>
+
+<input type="radio"  name="gender" id="Male" value="Male" th:checked="${booking.gender =='Male'}" >
+<label for="gender">Male</label>
+<input type="radio"  name="gender" id="Female"  value="Female" th:checked="${booking.gender =='Female'}">
+<label for="gender">Female</label>
+</div>
+        <div>
+            <label for="no_of_travelers">Enter Number of Travelers</label>
+            <input type="text" id="no_of_travelers" th:field="*{no_of_travelers}" />
+        </div>
+       
+       <div>
+            <label for="mail">Enter Mail</label>
+            <input type="text" id="mail" th:field="*{mail}" />
+        </div>
+       
+         <div>
+            <label for="adhar_card">Choose File</label>
+            <input type="file" id="adhar_card" th:field="*{adhar_card}" />
+        </div>
+      
+       
+        <div>
+            <button type="submit">Book Tickit Now</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Flight</title>
+    <link rel="stylesheet" href="/CSS/style5.css">
+    
+</head>
+<body>
+    <h1>Add Flight</h1>
+    <form th:action="@{/flight/add}" th:object="${flight}" method="post">
+     <div>
+            <label for="airplane">Airplane</label>
+            <input type="text" id="airplane" th:field="*{airplane}" />
+        </div>
+    <div>
+            <label for="departureAirport">Departure Airport</label>
+            <input type="text" id="departureAirport" th:field="*{departureAirport}" />
+        </div>
+        <div>
+            <label for="arrivalAirport">Arrival Airport</label>
+            <input type="text" id="arrivalAirport" th:field="*{arrivalAirport}" />
+        </div>
+        <div>
+            <label for="flightStatus">Flight Status</label>
+            <input type="text" id="flightStatus" th:field="*{flightStatus}" />
+        </div>
+        <div>
+            <label for="departureTime">Select Departure Time</label>
+            <input type="date" id="departureTime" th:field="*{departureTime}" />
+        </div>
+        <div>
+            <label for="arrivalTime">Select Arrival Time</label>
+            <input type="date" id="arrivalTime" th:field="*{arrivalTime}" />
+        </div>
+         <div>
+            <label for="economyFare">Economy Seat Fare </label>
+            <input type="text" id="economyFare" th:field="*{economyFare}" />
+        </div>
+         <div>
+            <label for="businessFare">Business Seat Fare</label>
+            <input type="text" id="businessFare" th:field="*{businessFare}" />
+        </div>
+         <div>
+            <label for="firstClassFare">FirstClass Seat Fare</label>
+            <input type="text" id="firstClassFare" th:field="*{firstClassFare}" />
+        </div>
+         <div>
+            <label for=" number_of_seats">Total number Seats</label>
+            <input type="text" id="number_of_seats" th:field="*{number_of_seats}" />
+        </div>
+      
+       
+        <div>
+            <button type="submit">Add Flight</button>
+        </div>
+    </form>
+</body>
+</html>

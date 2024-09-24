@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Airline Management System</title>
+    <link rel="stylesheet" href="/style3.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>SkyLink Airways</h2>
+        </div>
+        <ul class="sidebar-menu">
+        <li class="nav-item">
+                    <a class="nav-link" th:href="@{/adminregister}">Admin Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/about}">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/contact}">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/listflight}">View Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/passregistration}">Passenger Login</a>
+                </li>
+                
+            </ul>
+
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Welcome to Airline Management System</h1>
+        </header>
+        <section class="dashboard-content">
+        
+            <div class="cards">
+                <div class="card"><a th:href="@{/myservices}">
+                
+                    <h3>Our Services</h3>
+                    
+                    
+                    <!-- Content for Trending today -->
+                </div>
+                <div class="card"><a th:href="@{/mydestinations}">
+                    <h3>International Destinations</h3>
+                    <!-- Content for Most Popular -->
+                </div>
+            </div>
+           
+            </div>
+        </section>
+    </div>
+</body>
+</html>

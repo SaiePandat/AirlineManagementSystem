@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Passenger Login</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Passenger Login</h1>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <form th:action="@{/passloginstatus}"th:object="${passHome}" method="POST">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <br><br>
+                <input type="submit" value="Login">
+            </div>
+            <br>
+            <br>
+            <a th:href="@{/passregistration}">new passanger? register here</a>
+           
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+<h1>Admin Regestration</h1>
+<br>
+<br>
+<form th:action="@{/adminstatus}" th:object="${admin}" method="post">
+
+<div>
+<label for="name">Name</label>
+<input type="text" placeholder="Enter Your Name" name="name" th:field"*{name}">
+<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+<br>
+<br>
+<label for="age">Age</label>
+<input type="text" placeholder="Enter Your Age" name="age" th:field"*{age}">
+<span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+<br>
+<br>
+
+<label for="Username">Username</label>
+<input type="text" placeholder="Enter Your Username" name="Username" th:field"*{Username}">
+<span th:if="${#fields.hasErrors('Username')}" th:errors="*{Username}"></span>
+<br>
+<br>
+
+<label for="Password">Password</label>
+<input type="text" placeholder="Enter Your Password" name="Password" th:field"*{Password}">
+<span th:if="${#fields.hasErrors('Password')}" th:errors="*{Password}"></span>
+<br>
+<br>
+<input type="Submit">
+
+<a th:href="@{/adminlogin}">Click For Admin Login?</a>
+   
+
+</div>
+
+
+
+
+</form>
+</body>
+</html>

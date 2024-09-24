@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/CSS/style7.css">
+    <title>Ticket</title>
+</head>
+<body>
+    <h2>Ticket Details</h2>
+    <div>
+        <p><strong>Booking ID:</strong> <span th:text="${booking.id}"></span></p>
+        <p><strong>First Name:</strong> <span th:text="${booking.firstName}"></span></p>
+        <p><strong>Last Name:</strong> <span th:text="${booking.lastName}"></span></p>
+        <p><strong>Age:</strong> <span th:text="${booking.age}"></span></p>
+        <p><strong>Gender:</strong> <span th:text="${booking.gender}"></span></p>
+        <p><strong>Number of Travelers:</strong> <span th:text="${booking.no_of_travelers}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${booking.mail}"></span></p>
+    </div>
+    <button onclick="window.print()">Print Ticket</button>
+</body>
+</html>

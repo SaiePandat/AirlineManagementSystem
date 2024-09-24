@@ -1,0 +1,32 @@
+/* Horizontal navigation bar */
+.navbar {
+    background-color: #333; /* Background color of the navbar */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Ensure that content does not overflow */
+}
+
+.navbar li {
+    float: left; /* Float the list items to create a horizontal layout */
+}
+
+.navbar li a {
+    display: block; /* Display links as block elements */
+    color: white; /* Text color of the links */
+    text-align: center; /* Center-align text within the links */
+    padding: 14px 20px; /* Padding around the links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.navbar li a:hover {
+    background-color: #555; /* Background color of the links on hover */
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin Regestration</title>
+<link rel="stylesheet" href="/CSS/styles.css">
+</head>
+<body>
+<h1> Admin Login </h1>
+<form th:action="@{/adminloginstatus}" th:object="${adminHome}" method="post">
+<label for="username">Username</label>
+<input type="text" placeholder="Enter Your Username" name="username" th:field"*{username}">
+<span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></span>
+<br>
+<br>
+
+<label for="password">Password</label>
+<input type="text" placeholder="Enter Your Password" name="password" th:field"*{password}">
+<span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
+<br>
+<div th:if="${error}" th:text="${error}"></div>
+<input type="Submit">
+</form>
+<a th:href="@{/adminregister}">new Admin? register here</a>
+  
+</body>
+</html>

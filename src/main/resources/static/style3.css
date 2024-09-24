@@ -1,0 +1,145 @@
+@charset "ISO-8859-1";
+
+@charset "ISO-8859-1";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/img/img4.jpg'); /* Add your image URL here */
+    background-size:cover; /* Cover the entire background */
+    height:50 px;
+    
+    background-position: bottom ; /* Center the background image */
+    display: flex;
+    color: #2E365A;
+}
+
+
+
+
+
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: #3F5B8B;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background-color: #2E365A;
+    text-align: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #FBE4D8; /* Assuming a very light color for contrast */
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #2E365A;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li a {
+    color: #96AAC5;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar-menu li a.active,
+.sidebar-menu li a:hover {
+    background-color: #6C5E82;
+    color: white;
+    border-radius: 4px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    
+    background-color: #FBE4D8; /* Assuming a very light color for contrast */
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color: #D0797F;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard-content {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.cards {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  
+   text-align: center;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+   
+    text-align: center;
+}
+
+.side-widgets {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

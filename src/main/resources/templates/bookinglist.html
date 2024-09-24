@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Passenger Booking List</title>
+        <link rel="stylesheet" href="/CSS/style6.css">
+    
+</head>
+<body>
+    <h1>All Booking List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Number Of Travelers</th>
+                <th>Mail</th>
+                <th>Adhar Card</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="booking : ${bookings}">
+                <td th:text="${booking.id}"></td>
+                <td th:text="${booking.firstName}"></td>
+                <td th:text="${booking.lastName}"></td>
+                <td th:text="${booking.age}"></td>
+                <td th:text="${booking.gender}"></td>
+                <td th:text="${booking.no_of_travelers}"></td>
+                <td th:text="${booking.mail}"></td>
+                <td th:text="${booking.adhar_card}"></td>
+               
+                
+                
+                
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
